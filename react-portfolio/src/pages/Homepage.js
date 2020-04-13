@@ -1,9 +1,11 @@
 import React from 'react';
 
+import Hero from'../components/hero';
+
 function HomePage(props) {
 
     return (
-    <p>ok</p>
+    <Hero />
     );
 }
 
