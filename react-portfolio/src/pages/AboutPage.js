@@ -1,9 +1,18 @@
 import React from 'react';
+import Hero from '../components/hero'
+import Content from '../components/content';
 
 function AboutPage(props) {
 
     return (
-    <p>ok</p>
+    <div>
+        <Hero title={props.title} />
+    
+
+    <Content>
+        <p>hi</p>
+    </Content>
+    </div>
     );
 }
 
