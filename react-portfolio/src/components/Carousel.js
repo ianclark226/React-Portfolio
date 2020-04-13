@@ -3,6 +3,8 @@ import passgen from '../Images/passgen';
 import quiz from '../Images/quiz';
 import weather from '../Images/weather';
 
+import Card from '../components/Card';
+
 class Carousel extends React.Component {
 
     constructor(props) {
@@ -21,7 +23,7 @@ class Carousel extends React.Component {
                 id: 1,
                 title: 'Pokemon TCG Quiz',
                 subTitle: 'Know your cards',
-                imgSrc: passgen,
+                imgSrc: quiz,
                 link:'https://github.com/ianclark226/PokemonTCGQuiz',
                 selected: false
             },
@@ -29,7 +31,7 @@ class Carousel extends React.Component {
                 id: 2,
                 title: 'Weather Dashboard',
                 subTitle: 'Hows the weather up there?',
-                imgSrc: passgen,
+                imgSrc: weather,
                 link:'https://github.com/ianclark226/WeatherAPI',
                 selected: false
             }
@@ -66,7 +68,13 @@ class Carousel extends React.Component {
 
 render() {
     return(
-        <p>works</p>
-    )
+        <Container fluid={true}>
+            <Row className= "justify-content-around">
+                {this.makeItems(this.state.items)}
+            </Row>
+        </Container>
+    );
 }
 }
+
+export default Carousel;
