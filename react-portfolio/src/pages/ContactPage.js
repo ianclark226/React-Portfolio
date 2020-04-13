@@ -38,8 +38,31 @@ class ContactPage extends React.Component {
             disabled: true
         });
 
+        Axios.post('http://localhost:3000/api/email', this.state)
+        .then(res => {
+            if(res.data.success) {
+                
+            
+
+        this.setState({
+            disabled: false,
+            emailSent: true
         
+        });
+    }else {
+        this.setState({
+            disabled: false,
+            emailSent: false
+        })
     }
+    })
+    .catch(err => {
+        this.setState({
+            disabled: false,
+            emailSent: false
+        })
+    })
+}
 
 
     render() {
