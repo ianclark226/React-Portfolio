@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import NavbarBrand from 'react-bootstrap/NavbarBrand';
 import Nav from 'react-bootstrap/Nav';
+import Footer from './components/footer';
 
 class App extends React.Component {
   constructor(props) {
