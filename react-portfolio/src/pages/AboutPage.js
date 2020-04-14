@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from '../components/hero'
+import Hero from '../components/Hero/hero'
 import Content from '../components/content';
 
 function AboutPage(props) {

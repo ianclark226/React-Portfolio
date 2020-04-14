@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Hero from '../components/hero';
+import Hero from '../components/Hero/hero';
 import Form from 'react-bootstrap/Form';
 import Content from '../components/content';
 import Axios from 'axios';

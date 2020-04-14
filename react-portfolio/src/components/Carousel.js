@@ -1,7 +1,10 @@
 import React from 'react';
 import passgen from '../Images/passgen.png';
-import quiz from '../Images/quiz.png';
-import weather from '../Images/weather.png';
+import note from '../Images/Note_Taker.png';
+import buildboard from '../Images/buildboard.png';
+import penny from '../Images/pennypincher.png';
+import employee from '../Images/employee.png';
+import budget from '../Images/budgettracker.png';
 
 import Card from '../components/Card';
 import Container from 'react-bootstrap/Container';
@@ -15,26 +18,50 @@ class Carousel extends React.Component {
         items: [
             {
                 id: 0,
-                title: 'Password Generater',
-                subTitle: 'Random Process',
-                imgSrc: passgen,
-                link:'https://github.com/ianclark226/PasswordGenerator',
+                title: 'Penny Pincher',
+                subTitle: 'Money saving app',
+                imgSrc: penny,
+                link:'https://pennypincha.herokuapp.com',
                 selected: false
             },
             {
                 id: 1,
-                title: 'Pokemon TCG Quiz',
-                subTitle: 'Know your cards',
-                imgSrc: quiz,
-                link:'https://github.com/ianclark226/PokemonTCGQuiz',
+                title: 'Password Generator',
+                subTitle: 'Generates a random password',
+                imgSrc: passgen,
+                link:'https://ianclark226.github.io/PasswordGenerator/',
                 selected: false
             },
             {
                 id: 2,
-                title: 'Weather Dashboard',
-                subTitle: 'Hows the weather up there?',
-                imgSrc: weather,
-                link:'https://github.com/ianclark226/WeatherAPI',
+                title: 'Note Taker',
+                subTitle: 'Keep track of notes',
+                imgSrc: note,
+                link:'https://nameless-coast-44707.herokuapp.com/',
+                selected: false
+            },
+            {
+                id: 3,
+                title: 'Billboard',
+                subTitle: 'Billboard API',
+                imgSrc: buildboard,
+                link:'https://dp95000.github.io/group-project-1/',
+                selected: false
+            },
+            {
+                id: 4,
+                title: 'Employee Directory',
+                subTitle: 'React',
+                imgSrc: employee,
+                link:'https://reacthw19.herokuapp.com/',
+                selected: false
+            },
+            {
+                id: 5,
+                title: 'Budget Tracker',
+                subTitle: 'Tracking with mongo',
+                imgSrc: budget,
+                link:'https://powerful-tor-58813.herokuapp.com/',
                 selected: false
             }
         ]
