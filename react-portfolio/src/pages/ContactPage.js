@@ -4,6 +4,7 @@ import Hero from '../components/hero';
 import Form from 'react-bootstrap/Form';
 import Content from '../components/content';
 import Axios from 'axios';
+import Button from 'react-bootstrap/Button';
 
 class ContactPage extends React.Component {
 

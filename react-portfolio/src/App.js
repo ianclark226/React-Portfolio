@@ -7,6 +7,8 @@ import NavbarBrand from 'react-bootstrap/NavbarBrand';
 import Nav from 'react-bootstrap/Nav';
 import Footer from './components/footer';
 import AboutPage from './pages/AboutPage';
+import HomePage from './pages/Homepage';
+import ContactPage from './pages/ContactPage';
 
 class App extends React.Component {
   constructor(props) {
