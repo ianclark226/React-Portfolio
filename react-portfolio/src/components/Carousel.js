@@ -1,9 +1,11 @@
 import React from 'react';
-import passgen from '../Images/passgen';
-import quiz from '../Images/quiz';
-import weather from '../Images/weather';
+import passgen from '../Images/passgen.png';
+import quiz from '../Images/quiz.png';
+import weather from '../Images/weather.png';
 
 import Card from '../components/Card';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 
 class Carousel extends React.Component {
 
@@ -55,6 +57,8 @@ class Carousel extends React.Component {
             items
         });
 
+    }
+
         makeItems = (items) => {
             return items.map(item => {
                 return <Card item={item} onClick={(e => this.handleCardClick(item.id, e))} key={item.id} />
@@ -63,7 +67,7 @@ class Carousel extends React.Component {
         }
 
 
-    }
+    
 
 
 render() {

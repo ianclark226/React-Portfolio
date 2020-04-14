@@ -12,6 +12,8 @@ code {
     monospace;
 }
 
+
+
 .i-card {
   margin: 20px;
 }
@@ -19,7 +21,7 @@ code {
 .i-card-image {
   border-radius: 10px;
   width: 300px;
-  height: 400px;
+  height: 200px;
   box-shadow: 0px 0px 3px 1px #ccc;
 }
 
