@@ -21,49 +21,55 @@ class ContactPage extends React.Component {
     }
 
     handleChange = (event) => {
-        console.log(event);
+        
 
         const target = event.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
         const name = target.name;
-
+        
         this.setState({
             [name]: value
+            
         })
+        
     }
-
+    
+    
+    
     handleSubmit = (event) => {
         event.preventDefault();
+
+        console.log(event.target);
+        
 
         this.setState({
             disabled: true
         });
 
-        Axios.post('http://localhost:3000/api/email', this.state)
-        .then(res => {
-            if(res.data.success) {
-                
-            
+         Axios.post('http://localhost:3030/api/email', this.state)
+            .then(res => {
+                if(res.data.success) {
+                    this.setState({
+                        disabled: false,
+                        emailSent: true
+                    });
+                } else {
+                    this.setState({
+                        disabled: false,
+                        emailSent: false
+                    });
+                }
+            })
+            .catch(err => {
+                console.log(err);
 
-        this.setState({
-            disabled: false,
-            emailSent: true
-        
-        });
-    }else {
-        this.setState({
-            disabled: false,
-            emailSent: false
-        })
+                this.setState({
+                    disabled: false,
+                    emailSent: false
+                });
+            })
+
     }
-    })
-    .catch(err => {
-        this.setState({
-            disabled: false,
-            emailSent: false
-        })
-    })
-}
 
 
     render() {
@@ -72,8 +78,8 @@ class ContactPage extends React.Component {
         <Hero title={this.props.title} />
 
         <Content>
-            <Form onSubmit={this.handleSubmit}></Form>
-            <form>
+            <Form onSubmit={this.handleSubmit}>
+            
                 <Form.Group>
                     <Form.Label htmlFor="full-name">Full Name</Form.Label>
                     <Form.Control id="full-name" name="name" type="text" value={this.state.name} onChange={this.handleChange} />
@@ -95,7 +101,7 @@ class ContactPage extends React.Component {
 
                 {this.state.emailSent === true && <p className="d-inline success-msg">Email Sent</p>}
                 {this.state.emailSent === false && <p className="d-inline success-msg">Email Not Sent</p>}
-            </form>
+            </Form>
         </Content>
     </div>
     );
