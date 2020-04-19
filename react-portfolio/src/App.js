@@ -9,6 +9,7 @@ import Footer from './components/footer';
 import AboutPage from './pages/AboutPage';
 import HomePage from './pages/Homepage';
 import ContactPage from './pages/ContactPage';
+import LinkPage from './pages/LinkPage';
 
 class App extends React.Component {
   constructor(props) {
@@ -19,6 +20,7 @@ class App extends React.Component {
         { title: 'Home', path: '/' },
         { title: 'About', path: '/about' },
         { title: 'Contact', path: '/contact' },
+        {title: 'Link', path: '/links'}
       ],
       home: {
         title: 'Welcome',
@@ -31,7 +33,11 @@ class App extends React.Component {
       },
       contact: {
         title: 'Get in touch'
+      },
+      links: {
+        title: 'My Criteria'
       }
+
     }
 
     
@@ -52,6 +58,7 @@ render() {
               <Link className="nav-link" to="/">Home</Link>
               <Link className="nav-link" to="/about">About</Link>
               <Link className="nav-link" to="/contact">Contact</Link>
+              <Link className="nav-link" to="/links">Links</Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -59,6 +66,8 @@ render() {
         <Route path = "/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />} />
         <Route path = "/about" exact render={() => <AboutPage title={this.state.about.title} /> } />
         <Route path = "/contact" exact render={() => <ContactPage title={this.state.contact.title} /> } />
+        <Route path = "/links" exact render={() => <LinkPage title={this.state.links.title} subTitle={this.state.links.subTitle} text={this.state.links.text} />} />
+
 
         <Footer />
 
