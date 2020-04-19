@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CardInfo from './CardInfo';
+import CardInfo from './Cardinfo';
 
 
 function Card(props) {
